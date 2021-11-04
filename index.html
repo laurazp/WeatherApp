@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Weather App</title>
+
+        <!-- Meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/uwe4jcq.css">
+
+        <!-- Fav icon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Scripts -->
+        <!--<script src="keys.js"></script> -->
+        <script src="weatherPro.js"></script>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <!-- Optional Bootstrap CSS theme -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    </head>
+
+    <body onload="initGeolocation();">
+       <div class="wpBackground">
+            <div class="d-flex flex-column h-100">
+                <div id="wpMain" class="container">
+                    <div class="row">
+                        <div id="wpTitle" class="col text-center">
+                            Weather App
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="wpCurrent" class="col">
+                            <div class="row">
+                                <div id="wpTemp" class="col-sm">
+                                    <div id="location" class="row col d-md-inline-block">
+                                        Zaragoza
+                                    </div>
+                                    <div class="row col-d-md-inline-block" id="dayTime">Monday, 12:00PM</div>
+                                    <div class="row col-d-md-inline-block" id="summary">Mostly Sunny</div>
+                                    <div class="row col-d-md-inline-block" id="currentTemp">25&deg;</div>
+                                </div>
+                                <div class="col-sm">
+                                    <img id="weatherIcon" class="img-fluid" src="images/MostlySunny.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="wpConditions" class="col-md">
+                            <div class="row">
+                                <div id="precipitation" class="col-md">Precipitation 10%</div>
+                            </div>
+                            <div class="row">
+                                <div id="humidity" class="col-md">Humidity 65%</div>
+                            </div>
+                            <div class="row">
+                                <div id="wind" class="col-md">Wind 14mph</div>
+                            </div>
+                        </div>
+                        <div id="wpForecast" class="col-md">
+                            <!-- Navigation tabs -->
+                            <ul class="nav nav-tabs" id="forecastTab">
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#weekly">Weekly</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#daily">Hourly</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane container active" id="daily">
+                                    <table id="dailyForecast" width="100%">
+
+                                    </table>
+                                </div>
+                                <div class="tab-pane container fade" id="weekly">
+                                    <table id="weeklyForecast" width="100%">
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="wpFooter" class="col text-center">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://www.weatherapi.com/" title="Free Weather API" target="_blank">Powered by WeatherAPI.com</a><a href="https://www.weatherapi.com/" title="Free Weather API"><img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0"></a>
+                                </div>
+                                <div class="col">
+                                    <a href="https://coderfoundry.com" target="_blank">Tutorial by Coder Foundry</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+       <footer>Photo by <a href="https://unsplash.com/@wandervisions?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Arto Marttinen</a> on <a href="https://unsplash.com/collections/1408037/weather?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+       </footer>
+
+       <!-- Optional JavaScript (jQuery and Bootstrap + Popper bundle)-->
+       <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    </body>
+</html>

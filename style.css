@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@100;200&display=swap');
+
+body {  /*Modificar colores según imagen de fondo!!!*/
+    height: 100%;
+    background-color: cadetblue;
+    background: linear-gradient(to right, rgb(121, 145, 187), rgb(174, 201, 248), rgb(148, 186, 252));
+}
+
+.wpBackground {
+    height: 100vh;
+    min-height: 500px;
+    background: url(images/arto-marttinen-bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#wpTitle {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-style: normal;
+    font-size: 1.6em;
+    color: lightgoldenrodyellow;
+}
+
+#wpCurrent {
+    background-color: rgba(189, 184, 184, 0.521);
+    color: white;
+    resize: vertical;
+}
